@@ -30,7 +30,6 @@ public class ToyLottery {
                 toyIds.add(id);
                 toyNames.add(name);
                 toyWeights.add(weight);
-                // Добавляем в очередь несколько раз, исходя из веса
                 for (int i = 0; i < weight; i++) {
                     lotteryQueue.offer(id);
                 }
@@ -62,7 +61,6 @@ public class ToyLottery {
     public static void main(String[] args) throws IOException {
         ToyLottery lottery = new ToyLottery("1,Car,5", "2,Doll,3", "3,Ball,2");
 
-        // Запуск лотереи 10 раз и запись в файл
         lottery.runLottery(10, "lottery_results.txt");
     }
 }
